@@ -1,4 +1,4 @@
-from django.contrib import admin
+
 
 # Register your models here.
 
@@ -14,7 +14,7 @@ class CustomUserAdmin(UserAdmin):
     model = CustomUser
     list_display = ["username", "email", "salary_amount", "age","phone_number"]
 
-class CustomUserAdmin(UserAdmin):
+class CustomUserAdmin( UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = CustomUser

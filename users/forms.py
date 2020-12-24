@@ -1,6 +1,6 @@
 from .models import CustomUser
 
- Заготовки интерфейса пользовательской модели
+ #Заготовки интерфейса пользовательской модели
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 class CustomUserCreationForm(UserCreationForm):
@@ -10,9 +10,9 @@ class CustomUserCreationForm(UserCreationForm):
     """
     class Meta(UserCreationForm.Meta):
         model = CustomUser
-        #fields = UserCreationForm.Meta.fields + ('phone_number',)                                                             
+        fields = UserCreationForm.Meta.fields + ('phone_number',)                                                             
         fields = UserCreationForm.Meta.fields + ('age',) 
-        #fields = UserCreationForm.Meta.fields + ('salary_amount',) 
+        fields = UserCreationForm.Meta.fields + ('salary_amount',) 
 
 
 
